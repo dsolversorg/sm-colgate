@@ -43,7 +43,7 @@ jobs:
       - name: Sync to s3 bucket
         env:
           AWS_S3_BUCKET: sites.pessoadigital.digitalsolvers.com
-          CUSTOMER: Colgate
+          CUSTOMER: colgate
         run: |
           cp build/index.html build/$CUSTOMER
-          aws s3 sync build/ s3://$AWS_S3_BUCKET/Colgate
+          aws s3 sync build/ s3://$AWS_S3_BUCKET/colgate
